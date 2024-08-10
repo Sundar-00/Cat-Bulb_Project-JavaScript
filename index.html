@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat and Bulb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body >
+    <center class="bg-[#000] h-screen">
+        <div class="py-6">
+            <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt="bulb" class="w-44" id="bulb">
+            <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt="cat" class="w-44 cat" id="cat">
+        </div>
+
+        <center>
+            <div class="p-5 w-36 h-[100px] bg-[#F99D83] rounded-lg border border-[#000]" id="parag">
+                <p class="font-semibold" id="temp">Switch ON</p>
+                <button class="bg-green-400 w-10 h-6 border border-[#000] rounded-md" id="btnon">On</button>
+                <button class="bg-red-400 w-10 h-6 border border-[#000] rounded-md" id="btnoff">Off</button>
+            </div>
+        </center>
+
+    </center>
+</body>
+
+<script>
+    const img1 = document.getElementById("bulb")
+    const img2 = document.getElementById("cat")
+    const para = document.getElementById("temp")
+    const btn1 = document.getElementById("btnon")
+    const btn2 = document.getElementById("btnoff")
+
+    btn1.addEventListener("click",()=>{
+        console.log("On btn clicked")
+        console.log(bulb.src)
+        bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png"
+        console.log(cat.src)
+        cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png"
+        temp.textContent="Switched ON"
+    })
+
+    btn2.addEventListener("click",()=>{
+        console.log("Off btn clicked")
+        console.log(bulb.src)
+        bulb.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png"
+        console.log(cat.src)
+        cat.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png"
+        temp.textContent="Switched OFF"
+
+    })
+</script>
+</html>
